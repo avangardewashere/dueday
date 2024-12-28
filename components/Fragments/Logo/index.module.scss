@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    span{
+        color:#0083b0;
+        font-size: 20rem;
+        padding-top:2rem;
+        font-weight: 800;
+    }
+  }
+
+  .logoImg {
+    width: 30rem !important;
+
+    filter: invert(53%) sepia(96%) saturate(5729%) hue-rotate(174deg)
+      brightness(91%) contrast(101%);
+  }
+  .subtitle{
+    font-weight: 400;
+    color:#0083b090;
+    font-size: 16rem;;
+  }
+}
