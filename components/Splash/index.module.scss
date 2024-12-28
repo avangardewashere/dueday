@@ -9,7 +9,7 @@
   margin: auto;
 //   margin-top: 5vh;
   border-radius:12rem;
-  border: #008ab0 solid 1rem;
+//   border: #008ab0 solid 1rem;
   .glass{
     border:solid 1rem white;
     width:100%;
@@ -20,5 +20,23 @@
     justify-content: center;
     border-radius:12rem;
     backdrop-filter: blur(20rem);
+    transition: all linear .1s;
+  }
+
+  .noShow{
+    opacity:0;
+  }
+
+  .noDisplay{
+    opacity:0;
+    display:none;
+  }
+
+  .loginScreen{
+    opacity: 0;
+    transition: all linear .2s;
+  }
+  .show{
+    opacity:1;
   }
 }
