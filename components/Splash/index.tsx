@@ -1,58 +1,23 @@
-"use client";
 import clsx from "clsx";
-import { memo, useState } from "react";
+import { memo } from "react";
 import style from "./index.module.scss";
-import splashScreen1 from "@/assets/images/splash/splash-pic.png"
-import LogoComponent from "../Fragments/Logo";
-import { useMount } from "ahooks";
 import Image from "next/image";
-
-const SplashScreen = memo(() => {
-  const [intro, setIntro] = useState(true);
-  const [showLogin, setShowLogin] = useState(false);
-  const [display, setDisplay] = useState(false);
-
-
-  useMount(() => {
-    setTimeout(() => {
-      setIntro(false);
-      setTimeout(() => {
-        //display
-        setDisplay(true)
-        setTimeout(() => {
-          setShowLogin(true);
-        }, 500);
-      },500);
-    }, 1000);
-  });
-
+import bgCircleImg from "@/assets/images/splash/splash-bg-circle.png";
+import logoImg from "@/assets/images/today.png";
+const ComponentName = memo(() => {
   return (
     <div className={clsx(style.container)}>
-      <div
-        className={clsx(
-          style.glass,
-          !intro && style.noShow,
-          (display && showLogin) && style.noDisplay
-        )}
-      >
-        <LogoComponent />
-      </div>
-      <div
-        className={clsx(
-          style.loginScreen,
-          showLogin && style.show,
-          (!display && intro) && style.noDisplay
-        )}
-      >
-        <div className={clsx(style.Illustrations)}>
-            <Image src={splashScreen1} alt=""/> 
-          <div className={clsx(style.captions)}>
-            <h2>Create Good Habits</h2>
-          </div>
-        </div>
+      <Image
+        className={clsx(style.imageFloat)}
+        src={bgCircleImg}
+        alt="splash-bg-circle"
+      />
+      <div className={clsx(style.logo)}>
+        <Image className={clsx(style.logoImg)} src={logoImg} alt="logo" />
+        <span>Due Day</span>
       </div>
     </div>
   );
 });
 
-export default SplashScreen;
+export default ComponentName;

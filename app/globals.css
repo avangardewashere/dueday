@@ -1,4 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+* {
+  --linear-blue: linear-gradient(120deg, #6b73ff, #000dff);
+}
