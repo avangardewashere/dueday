@@ -7,7 +7,7 @@ const Home = memo(() => {
     <div className={clsx(style.container)}>
       <div className={clsx(style.header)}></div>
       <div className={clsx(style.body)}></div>
-      <div className={clsx(style.footer)}></div>
+      <div className={clsx(style .footer)}></div>
     </div>
   );
 });

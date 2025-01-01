@@ -1,10 +1,22 @@
+"use client"
 import clsx from "clsx";
 import { memo } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import bgCircleImg from "@/assets/images/splash/splash-bg-circle.png";
 import logoImg from "@/assets/images/today.png";
+import { useMount } from "ahooks";
+import { useRouter } from "next/navigation";
 const ComponentName = memo(() => {
+  const route = useRouter()
+
+  useMount(()=>{
+    setTimeout(()=>{
+      route.push("/home")
+    },2000)
+  })
+
+
   return (
     <div className={clsx(style.container)}>
       <Image
