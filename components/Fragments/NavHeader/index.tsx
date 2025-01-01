@@ -9,13 +9,13 @@ export interface INavHeader {
 }
 
 const NavHeader = memo((props: INavHeader) => {
-  const { back, title } = props;
+  const { back=true, title } = props;
   return (
     <div className={clsx(style.container)}>
-      <div className={style.back}>
+      {back && <div className={style.back}>
         <Image src={ChevronImg} alt="chevron" />
-      </div>
-      <h2>Continue with E-mail</h2>
+      </div>}
+      <h2>{title}</h2>
     </div>
   );
 });
