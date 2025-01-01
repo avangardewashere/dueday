@@ -12,7 +12,7 @@ const ComponentName = memo(() => {
 
   useMount(()=>{
     setTimeout(()=>{
-      route.push("/home")
+      route.push("/screen")
     },2000)
   })
 
