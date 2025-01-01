@@ -6,7 +6,7 @@
   padding-top: 40rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   .splashItem {
     display: flex;
     flex-direction: column;
@@ -52,10 +52,13 @@
   .buttonsWrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 366rem;
+    width: 360rem;
     margin-inline: auto;
     color: black;
-   
+    height:150rem;
+    align-content: center;
+    // justify-content: space-between;
+    gap:10rem 20rem;
   }
  
 }
