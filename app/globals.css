@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 * {
-  --linear-blue: linear-gradient(120deg, #6b73ff, #000dff);
+  --linear-bg: linear-gradient(120deg, #6b73ff, #000dff);
 }
